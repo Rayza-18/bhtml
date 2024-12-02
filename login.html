@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styleGlobal.css">
+    <link rel="stylesheet" href="StyleForms.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Digital</h1>
+    </header>
+
+    <form action="">
+
+                        <!--INPUTS-->
+
+        <!--email-->
+    <div> 
+        <div><label for="Email de login">Email de login</label></div>
+        <input type="email" id="email"  onchange="validateFields()"  placeholder="email">
+       <!--campos de aviso-->
+        <div class="error" id="email-required-error">Email é obrigatório</div> 
+        <div class="error" id="email-invalid-error">Email é inválido</div>
+    </div>
+        <!--senhar-->
+    <div>         
+        <div><label for="Senha">Senha</label></div>
+        <input type="password" id="password" onchange="onChangePassword()"  placeholder="password">
+       <!--campos de aviso-->
+        <div class="error" id="password-required-error">Senha é obrigatória</div>
+    </div>
+
+                        <!--BOTÃO-->
+<div class="button">
+    <button type="button" onclick="login()" id="login-button" class="btn_login_login" disabled>Login</button>
+    <button type="button" onclick="recoverPassword()" id="recover-password-button" class="btn_recuperar" disabled>Recuperar senha</button>
+    <button type="button" id="recover-password-button" onclick="registre()" class="btn_criatConta" >Criar Conta</button>
+   </div> 
+</form>
+
+    <footer>
+        <div class="link_rodape">
+    <a href="https://www.instagram.com/rayza.carla/"> <img class="icon" src="https://cdn.icon-icons.com/icons2/2717/PNG/512/instagram_logo_icon_173753.png"></a>
+    <a href="https://github.com/Rayza-18"> <img class="icon" src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"></a>
+    </div>
+    <p class="p_rodape" > Rayza - beyond </p>  
+
+    </footer>
+   <!-- <script src="loading.js"></script>-->
+  
+   <script src="login.js"></script>
+    <script src="./validacion.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+    <script>
+             const firebaseConfig = {
+    apiKey: "AIzaSyBnTIOcVgZxAVntZLkNaW9e6i9IeSDH87w",
+    authDomain: "biblioteca-html.firebaseapp.com",
+    projectId: "biblioteca-html",
+    storageBucket: "biblioteca-html.appspot.com",
+    messagingSenderId: "722043172246",
+    appId: "1:722043172246:web:2e35a67c8a258f65ac99b7"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        window.location.href = "pages/home/home.html";
+    }
+    })
+    </script>
+</body>
+
+</html>

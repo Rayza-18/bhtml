@@ -1,0 +1,142 @@
+/* PAGINA*/
+html {
+    background-image: url(https://img.freepik.com/vetores-premium/ceu-azul-e-areia-praia-fundo-aquarela_70155-230.jpg?w=740);
+    background-size: cover;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 17px gray;
+    margin: 4% 20%;
+    background-color: #ffffffcc;
+}
+/* CABEÇA*/
+header{
+ 
+    padding: 4px 16px;
+    height: 64px;
+    margin-top: 0px;
+    transform: translateY(0px);
+    left: 0px;
+    right: 0px;
+    box-shadow: 0px 2px 6px 1px gray;
+    color: white;
+    /* background-color: rgb(22, 95, 241); */
+    background-color: #1976d2 !important;
+    border-color: #1976d2 !important;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    contain: layout;
+    display: block;
+    flex: 1 1 auto;
+    max-width: 100%;
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1) transform, 0.2s cubic-bezier(0.4, 0, 0.2, 1) background-color, 0.2s cubic-bezier(0.4, 0, 0.2, 1) left, 0.2s cubic-bezier(0.4, 0, 0.2, 1) right, 280ms cubic-bezier(0.4, 0, 0.2, 1) box-shadow, 0.25s cubic-bezier(0.4, 0, 0.2, 1) max-width, 0.25s cubic-bezier(0.4, 0, 0.2, 1) width;
+    position: relative;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+h1 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* FORMULARIO*/
+/* LOGIN E REGISTRO*/
+form{
+    margin-top: 3%;
+    width: 80%;
+}
+#form-body{
+    margin-left: 20%;
+}
+/* inputs*/
+/*DIV ERRO DO HOME.HTML*/
+.error,#email-required-error,#password-required-error,#email-invalid-error{
+        background-color: transparent;
+        color:red;
+        margin-left: 4%;
+    display: none;
+    font-size: 12px;
+}
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px orangered;
+    width: 114%;
+    margin: 2% 4%;
+    height: 41px;
+    outline: none;
+    font-size: 20px;
+
+}
+
+/* Button*/
+.button{
+    display: flex;
+}
+button{
+    color: white;
+    margin: 4%;
+    width: 15%;
+    border-radius: 5%;
+    height: 33px;
+    box-shadow: 1px 3px 12px 0px gray;
+}
+
+button:disabled{
+background-color: white;
+border: solid 1px orangered;
+color: rgb(22, 95, 241);
+opacity: 70%;
+}
+#login-button{
+  background-color: rgb(22, 95, 241); 
+  border: none;
+
+}
+#login-button:disabled{
+background-color: transparent;
+  border: solid 1px orangered; 
+  color: orangered;
+ 
+}
+.btn_login_login{
+    width: 30%;
+}
+#recover-password-button{
+    background-color: transparent;
+    border: solid 1px rgb(22, 95, 241);
+    color: rgb(22, 95, 241);
+    width: 30%;
+     margin-left: 0px;
+}
+#recover-password-button:disabled{
+    background-color: orangered;
+    color: white;
+    border: none;
+    margin-left: 0px;
+}
+/* registro*/
+h2 {
+    text-align: center;
+}
+label {
+    display: flex;
+    margin: 4%;
+    font-size: 22px;
+}
+.btn_criar {
+    width: 50%;
+    background-color:orangered;
+    opacity: 70%;
+}
+.btn_login{
+    width: 50%;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital</title>
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="../../styleGlobal.css">
+</head>
+<body>
+    <header>
+        <div class="app">
+            <!-- NAVBAR-->
+            <div class="app-bar">
+                <div class="app_bar_title"></div> 
+                <!--ICON-->
+                <div class="app_bar_icon_navegacao">
+                    <button id="abrirNav" class="button_bar" onclick="openNav()">
+                        <img src="../../img/iconMenu.png" alt="">
+                    </button>
+                </div>
+                   <h4 class="title_bar"> Bibloteca Digital</h4>
+                </div>
+                <br>
+                <div class="app_bar_button">
+                <!-- BOTÃO NAVBAR-->
+                <button class="button_bar" type="text" onclick="home()">
+                    <img src="../../img/iconCasa.png" alt="icon Casa">Início
+                </button>
+                <button class="button_bar" type="text" id="abrirPerfil" onclick="perfil()">
+                    <img src="../../img/iconPessoa.png" alt="icon pessoa">
+                   Perfil
+                </button>
+                    <router-link to="/login"></router-link> 
+                <button class="button_bar" type="text" onclick="sair()">
+                   <img src="../../img/iconSair.png" alt="">Sair
+                </button>
+                </div>
+                
+            </div>
+         
+            
+         <!-- Conteúdo do  barra class="card_button_ler"-->
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <button class="sidebar_button"> <img src="../../img/iconMais.png" alt=""><p>Adicionar</p> </button>
+              <button class="sidebar_button"> <img src="../../img/iconMenos.png" alt=""> Remover</button>
+              <button class="sidebar_button"> <img src="../../img/iconCaixaLivro.png" alt=""> Livros favoritos</button>
+              <button class="sidebar_button"> <img src="../../img/iconLivros.png" alt=""> Livros </button>
+              <button class="sidebar_button"> <img src="../../img/iconVideo.png" alt=""> Video Aulas</button>
+              <button class="sidebar_button"> <img src="../../img/iconCaixaVideo.png" alt=""> Video Aulas favoritos</button>
+            </div>
+        
+           
+        
+        </div>
+    </header>
+    <main>
+        <div class="container">
+           <ol id="LivrosItens">
+
+           </ol>
+        <!--
+                <<div class="container_card" id="LivrosItens" ">
+               
+              <    <img src="./img/capaDoLivro.png" alt="">
+                  <h1>Dev</h1>
+                  <p> Como ser um dev</p>
+                  <p>Rayza carla</p>
+                  <p> incentivo ao avanço tecnológico, assim como a estrutura atual </p>
+                <div class="card-button">
+                    <button type="text" onclick="lerLivro()"class="card_button_ler">Leia</button>
+                   <br>
+                    <button type="text" onclick="editarLivro()" class="card_button_editar">Editar</button>
+                </div>
+                  </div>
+                <div class="container_card"  ">
+                  <img src" alt="">
+                  <h1>Dev</h1>
+                  <p> Como ser um dev</p>
+                  <p>Rayza carla</p>
+                  <p> incentivo ao avanço tecnológico, assim como a estrutura atual </p>
+                 <div class="card-button">
+                    <button type="text" onclick="lerLivro()" class="card_button_ler">Leia</button>
+                   <br>
+                    <button type="text" onclick="editarLivro()" class="card_button_editar">Editar</button>
+                </div>
+                  </div>
+                <div class="container_card"  ">
+                  <img src="./img/capaDoLivro.png" alt="">
+                  <h1>Dev</h1>
+                  <p> Como ser um dev</p>
+                  <p>Rayza carla</p>
+                  <p> incentivo ao avanço tecnológico, assim como a estrutura atual </p>
+                 <div class="card-button">
+                    <button type="text" onclick="lerLivro()" class="card_button_ler">Leia</button>
+                   <br>
+                    <button type="text" onclick="editarLivro()" class="card_button_editar">Editar</button>
+                </div>
+                  </div>
+                <div class="container_card"  ">
+                  <img src="./img/capaDoLivro.png" alt="">
+                  <h1>Dev</h1>
+                  <p> Como ser um dev</p>
+                  <p>Rayza carla</p>
+                  <p> incentivo ao avanço tecnológico, assim como a estrutura atual </p>
+                 <div class="card-button">
+                    <button type="text" onclick="lerLivro1()"class="card_button_ler">Leia</button>
+                   <br>
+                    <button type="text" onclick="editarLivro()"class="card_button_editar">Editar</button>
+                </div>
+                  </div>
+                <div class="container_card"  ">
+                  <img src="./img/capaDoLivro.png" alt="">
+                  <h1>Dev</h1>
+                  <p> Como ser um dev</p>
+                  <p>Rayza carla</p>
+                  <p> incentivo ao avanço tecnológico, assim como a estrutura atual </p>
+                 <div class="card-button">
+                    <button type="text" onclick="lerLivro2()" class="card_button_ler">Leia</button>
+                   <br>
+                    <button type="text" onclick="editarLivro()" class="card_button_editar">Editar</button>
+                </div>
+                  </div>
+                <div class="container_card"  ">
+                  <img src="./img/capaDoLivro.png" alt="">
+                  <h1>Dev</h1>
+                  <p> Como ser um dev</p>
+                  <p>Rayza carla</p>
+                  <p> incentivo ao avanço tecnológico, assim como a estrutura atual </p>
+                 <div class="card-button">
+                    <button type="text" onclick="lerLivro3()" class="card_button_ler">Leia</button>
+                   <br>
+                    <button type="text" onclick="editarLivro4()" class="card_button_editar">Editar</button>
+                </div>
+                  </div>
+                <div class="container_card"  ">
+                  <img src="./img/capaDoLivro.png" alt="">
+                  <h1>Dev</h1>
+                  <p> Como ser um dev</p>
+                  <p>Rayza carla</p>
+                  <p> incentivo ao avanço tecnológico, assim como a estrutura atual </p>
+                 <div class="card-button">
+                    <button type="text" onclick="lerLivro5()" class="card_button_ler">Leia</button>
+                   <br>
+                    <button type="text" onclick="editarLivro()" class="card_button_editar">Editar</button>
+                </div>
+                  </div>  -->  ''
+        </div>
+      
+    </main>
+
+ 
+    <footer>
+      <div class="link_rodape">
+  <a href="https://www.instagram.com/rayza.carla/"> <img class="icon" src="https://cdn.icon-icons.com/icons2/2717/PNG/512/instagram_logo_icon_173753.png"></a>
+  <a href="https://github.com/Rayza-18"> <img class="icon" src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"></a>
+  </div>
+  <p class="p_rodape" > Rayza - beyond </p>  
+
+  </footer>
+  <script src="../../authGuard.js"></script>
+  <script src="home.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script>
+    //ESTÁ AQUI PQ COLOCANDO EM JS NÃO PEGA DE FORMA NENHUMA
+    function sair(){
+    //window.location.href="../../login.html";
+    console.log("esta pegando");
+    firebase.auth().signOut().then(() => {
+      window.location.href = "../../login.html";
+  }).catch(() => {
+      alert('Erro ao fazer logout');
+  })
+}
+  const firebaseConfig = {
+apiKey: "AIzaSyBnTIOcVgZxAVntZLkNaW9e6i9IeSDH87w",
+authDomain: "biblioteca-html.firebaseapp.com",
+projectId: "biblioteca-html",
+storageBucket: "biblioteca-html.appspot.com",
+messagingSenderId: "722043172246",
+appId: "1:722043172246:web:2e35a67c8a258f65ac99b7"
+};
+firebase.initializeApp(firebaseConfig);
+
+firebase.auth().onAuthStateChanged(user => {
+    if (!user) {
+        window.location.href = "../../login.html";
+    }
+})
+ 
+  </script>  
+</body>
+</html>

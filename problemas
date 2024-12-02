@@ -1,0 +1,11 @@
+tela loading não aparece
+trata a recuperação de senhar 
+( falta ver pq o email não envia e tratar a mensagem de retorno de erro )
+Estilizar o registro de uma forma agradevel
+estilizar o login de forma agradavel
+dar utilidade ao botão de login do registrar
+fazer modal para livro
+fazer modal para editaar
+fazer modal par perfil
+ERROS TRATADOS
+não consigo criar contas novas (na const form do js o registerButton estava pegando o id com o nome errado)

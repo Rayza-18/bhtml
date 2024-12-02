@@ -1,0 +1,206 @@
+/*all*/
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s; 
+   
+}
+
+/* HEARDER*/
+  
+.app { 
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 4px 16px;
+    height: 64px;
+    margin-top: 0px;
+    
+    left: 0px;
+    right: 0px;
+    box-shadow: 0px 2px 6px 1px gray;
+    color: white;
+        top: 0;
+     background-color: #1976d2 !important;
+    border-color: #1976d2 !important;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+.app-bar {
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+    align-items: center;
+}
+h4.title_bar {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: white;
+}
+.app_bar_button {
+    display: flex;
+}
+
+.button_bar {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin: 0% 10px;
+    background-color: transparent;
+    color: white;
+    
+}
+.button_bar:hover{
+    background-color: #1069c1;
+    border-radius: 10%;
+}
+.button_bar:active {
+    box-shadow: 0px 0px 5px 1px #0e5caa;
+    transform: scale(0.95); /* Reduz ligeiramente o botão */
+}
+/*Modal*/
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Ficar no lugar */
+    z-index: 1; /* Ficar na frente */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgb(0,0,0); /* Fallback */
+    background-color: rgba(0,0,0,0.4); /* Fundo preto com opacidade */
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura */
+    max-width: 500px; /* Largura máxima */
+}
+/* Botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* SIDEBAR*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FF7F50;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-right: solid 1px #db6a41;
+    box-shadow: 2px 0px 20px 1px gray
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+button.sidebar_button {
+    display: flex;
+    background-color: #1976d2;
+    width: 93%;
+    margin: 6% 3%;
+    color: white;
+    height: 9%;
+    align-items: center;
+}
+button.sidebar_button:hover {
+    background-color: #115aa3;
+}
+button.sidebar_button:active {
+    box-shadow: 0px 0px 5px 1px #0e4a87;
+    transform: scale(0.95); /* Reduz ligeiramente o botão */
+}
+
+
+/* MAIN*/
+main {
+    margin-top: 5%;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container_card{
+    display: flex;
+    width: 16%;
+    margin: 3% 2%;
+    flex-direction: column;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    border-radius: 4px;
+    border-color:#FF7F50  ;
+    background-color: #FF7F50 ;
+    padding: 16px;
+}
+.container_card:hover{
+    background-color: #fc8a60;
+}
+.card-button {
+    display: flex;
+    justify-content: space-around;
+}
+button.card_button_ler {
+    border: solid 1px #e96635;
+    border-radius: 5%;
+    width: 40%;
+    height: 119%;
+    font-size: 18px;
+    margin: 0px;
+}
+button.card_button_editar {
+    background-color: #e96635;
+    border-radius: 5%;
+    width: 40%;
+    height: 119%;
+    font-size: 18px;
+    margin: 0px;
+}
+button.card_button_editar:hover{
+    background-color: #df5e2e;
+}
+button.card_button_editar:active {
+    box-shadow: 0px 0px 5px 1px #aa4723;
+    transform: scale(0.95); /* Reduz ligeiramente o botão */
+}
+button.card_button_ler:hover{
+    border: solid 2px #df5e2e;
+}
+button.card_button_ler:active {
+    box-shadow: 0px 0px 5px 1px #d25b30;
+    transform: scale(0.95); /* Reduz ligeiramente o botão */
+}
